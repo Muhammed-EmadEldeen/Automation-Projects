@@ -19,7 +19,8 @@ Videos_destination = r'D:\Download\Videos'
 Images_destination = r'D:\Download\Images'
 
 
-Folders = [r"Anime",r"Other",r"PDFs",r"Setup",r"Podcasts",r"Zip Files",r"Lectures",r"Videos",r"Images"]
+
+Folders = [r"Anime",r"Other",r"PDFs",r"Setup",r"Podcasts",r"Zip Files",r"Lectures",r"Videos",r"Images",r'WavesAudio.MaxxAudioProforDell2019_fh4rh281wavaa!App']
 
 dicti={
     anime_destination:r"(.*)([Aa][Nn][Ii][Mm][Ee])(.*)(\.mp4)$",
@@ -66,6 +67,7 @@ def choose_folder_for_file(filename):
 
 
 def Moving():
+    print(os.listdir(folder_to_track))
     files = work_on_files_only(os.listdir(folder_to_track))
     for filename in files:
         choose_folder_for_file(filename)
